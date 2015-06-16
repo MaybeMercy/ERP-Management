@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>入库单</title>
+    <link href="foundation-5.5.0/css/foundation.min.css" rel="stylesheet">
+    <link href="foundation-5.5.0/css/custom.css" rel="stylesheet">
+</head>
+<body>
+<nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+        <li class="name">
+            <h1><a href="index.html">Home</a></h1>
+        </li>
+    </ul>
+    <section class="top-bar-section">
+        <!-- Left Nav Section -->
+        <ul class="left">
+            <li><a href="in_lib.html">入库单</a></li>
+            <li><a href="out_lib.html">出库单</a></li>
+            <li><a href="stocking.html">库存盘点</a></li>
+            <li><a href="transfer.html">调拨单</a></li>
+        </ul>
+        <!-- Right Nav Section -->
+        <ul class="right">
+            <li><a href="https://github.com/MaybeMercy/StudentManagementByPHP">Fork me on GitHub</a></li>
+        </ul>
+    </section>
+</nav>
+<header>
+    <div class="row">
+        <div class="large-12 columns">
+            <h2>入库单</h2>
+            <h4>请按要求填写入库单，我们会将物料信息录入后台数据库</h4>
+        </div>
+    </div>
+</header>
+<div class="row">
+    <form method="post">
+        <div class="row large-12">
+            <div class="large-3 columns">
+                <label>单据号</label>
+                <input type="number" name="inID">
+            </div>
+            <div class="large-3 columns">
+                <label>凭证号</label>
+                <input type="number" name="cerID">
+            </div>
+            <div class="large-3 columns">
+                <label>时间</label>
+                <input type="date" name="inTime">
+            </div>
+            <div class="large-3 columns">
+                <label>存放地</label>
+                <input type="text" name="storage">
+            </div>
+        </div>
+        <div class="row large-12">
+            <div class="large-3 columns">
+                <label>往来单位</label>
+                <input type="text" name="contact">
+            </div>
+            <div class="large-3 columns left">
+                <label>经办人</label>
+                <input type="text" name="responsible">
+            </div>
+        </div>
+        <div class="row">
+            <div  class="large-12">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>物料编号</th>
+                            <th>摘要</th>
+                            <th>物品</th>
+                            <th>单位</th>
+                            <th>数量</th>
+                            <th>单价</th>
+                            <th>金额</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th><input type="number" name="mID" required></th>
+                            <th><textarea type="text" name="description" required></textarea></th>
+                            <th><input type="text" name="name" required></th>
+                            <th><input type="text" name="unit" required></th>
+                            <th><input type="number" name="amount" required></th>
+                            <th><input type="number" name="price" required></th>
+                            <th><input type="number" name="sum" required></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="large-6 large-offset-3">
+            <input class="small radius button left" type="submit" value="submit">
+            <input class="small radius button right" type="reset" value="reset">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

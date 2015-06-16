@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>入库单</title>
+    <link href="foundation-5.5.0/css/foundation.min.css" rel="stylesheet">
+    <link href="foundation-5.5.0/css/custom.css" rel="stylesheet">
+</head>
+<body>
+<nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+        <li class="name">
+            <h1><a href="index.html">Home</a></h1>
+        </li>
+    </ul>
+    <section class="top-bar-section">
+        <!-- Left Nav Section -->
+        <ul class="left">
+            <li><a href="in_lib.html">入库单</a></li>
+            <li><a href="out_lib.html">出库单</a></li>
+            <li><a href="stocking.html">库存盘点</a></li>
+            <li><a href="transfer.html">调拨单</a></li>
+        </ul>
+        <!-- Right Nav Section -->
+        <ul class="right">
+            <li><a href="https://github.com/MaybeMercy/StudentManagementByPHP">Fork me on GitHub</a></li>
+        </ul>
+    </section>
+</nav>
+<header>
+    <div class="row">
+        <div class="large-12 columns">
+            <h2>库存盘点</h2>
+            <h4>输入日期和仓库名称，可获得相应时间的库存调度</h4>
+        </div>
+    </div>
+</header>
+<div class="row">
+    <form method="post">
+        <div class="large-4 large-offset-4">
+            <label>时间</label>
+            <input type="date" name="time" required="required">
+            <label>仓库</label>
+            <input type="text" name="storage" required="required">
+        </div>
+        <div class="large-4 large-offset-4">
+            <input class="small radius button left" type="submit" value="submit">
+            <input class="small radius button right" type="reset" value="reset">
+        </div>
+    </form>
+</div>
+<div class="row">
+    <table class="large-12">
+        <thead>
+        <tr>
+            <th>物品 name</th>
+            <th>单位 unit</th>
+            <th>数量 amount</th>
+            <th>单价 price</th>
+            <th>金额 sum</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+</body>
+</html>

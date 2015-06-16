@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ERP库存管理系统</title>
+    <link href="foundation-5.5.0/css/foundation.min.css" rel="stylesheet" />
+    <link href="foundation-5.5.0/css/custom.css" rel="stylesheet" />
+</head>
+<body>
+<nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+        <li class="name">
+            <h1><a href="index.html">Home</a></h1>
+        </li>
+    </ul>
+    <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+            <li><a href="https://github.com/MaybeMercy/StudentManagementByPHP">Fork me on GitHub</a></li>
+        </ul>
+    </section>
+</nav>
+<header>
+    <div class="row">
+        <div class="large-12 columns">
+            <h2>欢迎来到ERP库存管理系统</h2>
+            <h4>填写用户名和密码，进入本系统</h4>
+        </div>
+    </div>
+</header>
+<div class="row">
+    <form class="large-4 large-offset-4" method="post" action="in_lib.html" onsubmit="return auth()">
+        <label>用户名</label>
+        <input type="text" name="user_name" id="user_name" required>
+        <label>密码</label>
+        <input type="password" name="password" id="password" required>
+        <br>
+        <input class="small radius button left" type="submit" value="submit">
+        <input class="small radius button right" type="reset" value="reset">
+    </form>
+</div>
+<script type="text/javascript">
+    function auth(){
+        var name = document.getElementById("user_name").value;
+        var pwd = document.getElementById("password").value;
+        if(name=="root"||pwd=="root"){
+            alert("密码正确");
+            return true;
+        }else{
+            alert("密码错误");
+            return false;
+        }
+
+    }
+</script>
+</body>
+</html>
